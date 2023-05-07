@@ -146,7 +146,7 @@ public abstract class AbstractEmailTest {
      * @throws MessagingException writing the email failed
      */
     protected void saveEmailToFile(final WiserMessage email) throws IOException, MessagingException {
-        final int currCounter = fileNameCounter++ % 20;
+        final int currCounter = fileNameCounter++ % 10;
         final String emailFileName = "email" + new Date().getTime() + "-" + currCounter + ".eml";
         final File emailFile = new File(emailOutputDir, emailFileName);
         EmailUtils.writeMimeMessage(emailFile, email.getMimeMessage());
