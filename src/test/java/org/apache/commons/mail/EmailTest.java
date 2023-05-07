@@ -163,9 +163,9 @@ public class EmailTest extends AbstractEmailTest {
     }
 
     @Test
-    public void testSetContentNull() throws Exception {
+    public void testSetContentNull() {
         final MimeMultipart part = new MimeMultipart("abc123");
-        email.setContent(null);
+        email.setContent(part);
         assertNull(email.getContentMimeMultipart());
     }
 
