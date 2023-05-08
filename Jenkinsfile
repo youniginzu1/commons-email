@@ -5,10 +5,10 @@ pipeline {
             args '-u root -v /var/jenkins_home/.m2:/root/.m2' 
         }
     }
-    // options {
-    //     skipStagesAfterUnstable()
-    //     cache(maxCacheSize: 250, defaultBranch: 'master', caches: [arbitraryFileCache(path: '.ekstazi')]) 
-    // }
+    options {
+        skipStagesAfterUnstable()
+        cache(maxCacheSize: 250, defaultBranch: 'master', caches: [arbitraryFileCache(path: '.ekstazi')]) 
+    }
     stages {
         stage('CheckVersionJava') { 
             steps {
